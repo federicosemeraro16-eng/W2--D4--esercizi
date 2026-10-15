@@ -117,7 +117,16 @@ console.log(divisibile(15));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function invertistringa(testo = " ") {
+  let reverseText = "";
+  let splittedText = testo.split("");
+  for (let i = splittedText.length - 1; i >= 0; i--) {
+    reverseText += splittedText[i];
+  }
+  return reverseText;
+}
 
+console.log(invertistringa("federico"));
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
    "ciao mondo" → "Ciao Mondo".
@@ -126,12 +135,23 @@ console.log(divisibile(15));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function startWithCapitleletter(text = "") {
-  text.split("");
-  return text;
+function startWithCapitleletter(text = " ") {
+  let splitted = text.split("");
+  let capitalArr = [];
+  let singleCharacter = "";
+  for (let i = 0; i < splitted.length; i++) {
+    singleCharacter = splitted[i].slice(0, 1).toUpperCase();
+    capitalArr.push(singleCharacter);
+  }
+
+  let firstCapital = capitalArr.slice(0, 1);
+  let lastCapital = capitalArr.slice(-1, 1);
+  console.log(capitalArr);
+
+  return splitted;
 }
 
-console.log(startWithCapitleletter("Federico"));
+console.log(startWithCapitleletter("Federico è qui"));
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
@@ -153,6 +173,18 @@ console.log(removeItems("Epicode"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function casualNumbers(n) {
+  let arrayNumb = [];
+  for (let i = 0; i < n; i++) {
+    let casualNumb = Math.floor(Math.random() * 11);
+    arrayNumb.push(casualNumb);
+  }
+  return arrayNumb;
+}
+
+console.log(casualNumbers(10));
+console.log(casualNumbers(10).length);
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
