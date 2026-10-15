@@ -135,23 +135,21 @@ console.log(invertistringa("federico"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function startWithCapitleletter(text = " ") {
-  let splitted = text.split("");
-  let capitalArr = [];
-  let singleCharacter = "";
-  for (let i = 0; i < splitted.length; i++) {
-    singleCharacter = splitted[i].slice(0, 1).toUpperCase();
-    capitalArr.push(singleCharacter);
-  }
-
-  let firstCapital = capitalArr.slice(0, 1);
-  let lastCapital = capitalArr.slice(-1, 1);
-  console.log(capitalArr);
-
-  return splitted;
+function inizialiMaiuscole(frase =' '){
+   let textsplitted = frase.split(' ')
+   let capitalLetters =''
+   let restodellaParola =''
+   
+   for(let i =0; i < textsplitted.length;i++){
+      capitalLetters = textsplitted[i].slice(0,1).toUpperCase()
+      restodellaParola =textsplitted[i].slice(1)
+      textsplitted[i] = capitalLetters + restodellaParola
+   }
+   return textsplitted.join('')
 }
 
-console.log(startWithCapitleletter("Federico è qui"));
+
+console.log(inizialiMaiuscole("federico è qui"));
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
