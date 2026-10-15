@@ -60,7 +60,6 @@ console.log(distanceFrom19(25));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function intoInterval(n) {
-  
   let intoInterval;
   if ((n > 20 && n < 100) || (n === 20 && n === 100)) {
     return (intoInterval = true);
@@ -83,11 +82,33 @@ console.log(intoInterval(400));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(text = "") {
+  if (text.startsWith("EPICODE")) {
+    return text;
+  } else {
+    return "EPICODE" + "" + text; //da controllare perché non prende lo spazio //
+  }
+}
+
+console.log(epify("EPICODE"));
+console.log(epify("Federico"));
+
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function divisibile(n) {
+  if ((n % 2 === 0 && n % 3 === 0) || n % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(divisibile(42));
+console.log(divisibile(15));
 
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
@@ -105,12 +126,26 @@ console.log(intoInterval(400));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function startWithCapitleletter(text = "") {
+  text.split("");
+  return text;
+}
+
+console.log(startWithCapitleletter("Federico"));
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function removeItems(text = "") {
+  let textCompleted = text.slice(1, -1);
+
+  return textCompleted;
+}
+
+console.log(removeItems("Epicode"));
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
